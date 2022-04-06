@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 ENV HOME=/home/zoomrec \
-    TZ=KGT \
+    TZ=Asia/Bishkek \
     TERM=xfce4-terminal \
     START_DIR=/start \
     DEBIAN_FRONTEND=noninteractive \
@@ -13,7 +13,8 @@ ENV HOME=/home/zoomrec \
     TELEGRAM_BOT_TOKEN=5136192859:AAHrGLT8JD-WfHCROZ-mxqvqYhbCYjQP9sc \
     TELEGRAM_CHAT_ID=5077158262 \
     DEBUG=True \
-    REC_PATH=${HOME}/recordings/
+    REC_PATH=${HOME}/recordings/ \
+    DISPLAY_NAME="Dipanshu Chakole 16A"
 	
 # Add user
 RUN useradd -ms /bin/bash zoomrec -d ${HOME}
