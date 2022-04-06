@@ -108,8 +108,10 @@ RUN apt-get update && \
 # Install VLC - optional
     apt-get install --no-install-recommends -y vlc && \
 # Install rclone
-    apt-get install curl unzip \
-    curl https://rclone.org/install.sh | bash \
+    apt-get install --no-install-recommends -y \
+        curl \
+        unzip \
+        rclone && \
 # Clean up
     apt-get autoremove --purge -y && \
     apt-get autoclean -y && \
