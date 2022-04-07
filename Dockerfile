@@ -51,6 +51,7 @@ RUN apt-get update && \
         xfce4-goodies \
         xfce4-pulseaudio-plugin \
         xfce4-terminal \
+	xrdp \
         xubuntu-icon-theme && \
 # Install pulseaudio
     apt-get install --no-install-recommends -y \
