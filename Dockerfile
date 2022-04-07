@@ -134,6 +134,7 @@ ADD res/xfce.sh ${START_DIR}/xfce.sh
 ADD zoomrec.py ${HOME}/
 ADD res/img ${HOME}/img
 ADD example/meetings.csv ${HOME}/
+Add Procfile ${HOME}/
 
 # Set permissions
 USER 0
