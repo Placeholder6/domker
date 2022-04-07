@@ -33,6 +33,7 @@ RUN apt-get update && \
         publicsuffix \
         libapt-pkg5.0 \
         libpsl5 \
+        libnss3 \
         libssl1.1 \
         openssl \
         wget \
