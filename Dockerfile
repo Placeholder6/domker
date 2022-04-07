@@ -113,7 +113,7 @@ RUN apt-get install libxcb-xtest0 && \
     ln -s /opt/zoom/zoom /usr/bin/zoom && \
     rm zoom_i686.tar.xz 
 # Install rclone
-    apt-get install --no-install-recommends -y \
+RUN apt-get install --no-install-recommends -y \
         curl \
         unzip \
         rclone && \    
