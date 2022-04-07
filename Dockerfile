@@ -86,15 +86,7 @@ RUN apt-get update && \
         libxslt1.1 \
         libsqlite3-0 \
         libxcb-keysyms1 \
-        libxcb-xtest0 && \
-# Install Zoom
-    apt-get install libxcb-xtest0 && \
-    wget -q -O zoom_i686.tar.xz https://zoom.us/client/5.4.53391.1108/zoom_i686.tar.xz && \
-    tar xvf zoom_i686.tar.xz && \
-    mv zoom /opt && \
-    chmod +x /opt/zoom/zoom && \
-    ln -s /opt/zoom/zoom /usr/bin/zoom && \
-    rm zoom_i686.tar.xz 
+        libxcb-xtest0 && \ 
 # Install FFmpeg
     apt-get install --no-install-recommends -y \
         ffmpeg \
@@ -115,6 +107,14 @@ RUN apt-get update && \
         curl \
         unzip \
         rclone && \
+# Install Zoom
+RUN apt-get install libxcb-xtest0 && \
+    wget -q -O zoom_i686.tar.xz https://zoom.us/client/5.4.53391.1108/zoom_i686.tar.xz && \
+    tar xvf zoom_i686.tar.xz && \
+    mv zoom /opt && \
+    chmod +x /opt/zoom/zoom && \
+    ln -s /opt/zoom/zoom /usr/bin/zoom && \
+    rm zoom_i686.tar.xz 	
 # Clean up
     apt-get autoremove --purge -y && \
     apt-get autoclean -y && \
